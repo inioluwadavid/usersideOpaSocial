@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="shortcut icon" href="../img/opa.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Material+Icons&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body class="userside day">
+    <nav class="navbar navbar-default navbar-fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                          <img src="../img/opa-removebg-preview.png" alt="OpaSocial" title="OpaSocial" > 
+                        </a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-left-block">
+              <li>
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    New Order <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="./index.html ">Single Order</a>
+                    <a class="dropdown-item" href="./mass-order.html">Mass order</a>
+              </div>
+                </div>
+              </li>
+                  <li class="active">
+                <a href="./service.html" >
+                                  Services
+                </a>
+              </li>
+                                 <li>
+                <a href="./topup-account.html" >
+                                  Add funds
+                </a>
+              </li>
+                  <li>
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Orders History <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="./order.html">Orders</a>
+                      </div>
+                </div>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Support & Api <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./ticket.html">Tickets</a>
+                        <a class="dropdown-item" href="./terms.html">Terms</a>
+                                            <a class="dropdown-item" href="./api.html">API</a>
+                     <a class="dropdown-item" href="./affiliates.html">Affiliates</a>
+                     </div>
+                </div>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Others <i class="fa fa-angle-down"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" target="_blank">Vouchers </a>
+                    <a class="dropdown-item" href="./giveaway.html">Giveaway</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-right-block">
+              
+              <li><a class="toggle" href="javascript:toggleMode2();"><span class="nav-icon" data-toggle="tooltip" data-placement="bottom" title="Day/Night"><i class="fa fa-moon"></i></span></a></li>
+              
+              <li><a href="./account.html" data-toggle="tooltip" data-placement="bottom" title="Account Setting"><span class="nav-icon"><img src="../img/settings.png"></span></a></li>
+                          <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="nav-icon"><img src="../img/user.png"></span> davidooo <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="./account.html">Account</a></li>
+                  <li><a href="../index.html">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+
+      <div id="wrapper" class="toggled">
+        <div id="sidebar-wrapper" class="sidebar-toggle">
+          <div class="side-back">
+            <div class="side-box">
+              <div class="media">
+                <div class="media-left">
+                  <img class="media-object" src="../img/chart.png">
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">48556642</h4>
+                  <h5>Total Orders</h5>
+                </div>
+              </div>
+            </div>
+            <div class="side-box">
+              <div class="media">
+                <div class="media-left">
+                  <img class="media-object img-fluid" src="../img/nairaa.png" width="40px" height="40px">
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">₦0.00</h4>
+                  <h5>Current Balance</h5>
+                </div>
+              </div>
+              <a href="./topup-account.html" class="add-btn">Top Up Account</a>
+            </div>
+            <div class="side-box">
+              <button type="button" data-toggle="modal" data-target="#acc-status">
+              <div class="media">
+                <div class="media-left">
+                  <img class="media-object" src="../img/1star.png">
+                </div>
+                
+                <div class="media-body">
+                  <h4 class="media-heading">
+                                        NEW
+                                    </h4>
+                  <h5>Current Status</h5>
+                </div>
+               
+              </div>
+                 </button>
+                           
+            </div>
+            <a href="./dashboard.html" class="side-link">Dashboard <i class="fas fa-chevron-right"></i></a>
+          
+            <a href="./update.html" class="side-link">Updates <i class="fas fa-chevron-right"></i></a>
+            <a href="./childpanel.html" class="side-link">Child Panel <i class="fas fa-chevron-right"></i></a>
+            
+                    </div>
+        </div>
+        <div id="page-wrapper">
+          <div class="inner-page-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="left-info">
+                    <a href="javascript:void(0);" class="toggle-menu"><i class="fas fa-bars"></i></a><h2 class="page-title">You are currently on: <span>Services</span></h2>
+                  </div>
+                </div>
+                <div id="show-notifications"></div>
+                <div class="col-sm-6">
+                  <div class="right-info">
+                    <h2 class="page-title">Welcome, <span>davidooo</span> Your balance is $0.00</h2>
+                  </div>
+                </div>
+              </div>
+              <!--   Banner Code Start  -->
+                       <!--   Banner Code End Start  -->
+            </div>
+            <!-- Main variables *content* -->
+            <style>
+    .fab.fa-instagram {
+    background: linear-gradient(200deg, #d047d1, red, #ff0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 17px;
+    padding: 2.4px;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: lighter;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-facebook-square {
+    background: #207eff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-youtube {
+    background: #ff0042;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-twitter {
+    background: #1da1f2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-telegram-plane {
+    background: #2b9fd2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 14px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-soundcloud {
+    background: #ff5836;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-spotify {
+    background: #62ffa2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .far.fa-star {
+    background: #ffe700;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-tiktok {
+    background: #ff0042;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-twitch {
+    background: #4b367c;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 14px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-pinterest-p {
+    background: #ff5858;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fa.fa-music {
+    background: #69C9D0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 14px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fas.fa-globe {
+    background: #ff9e5e;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .fas.fa-stream {
+    background: #ccc;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-hotjar {
+    background: #ff0000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-periscope {
+    background: #e24d3a;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-linkedin-in {
+    background: #0077b0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 14px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-tumblr {
+    background: #1c3764;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-dailymotion {
+    background: #00c9eb;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fas.fa-magic {
+    background: #24CA7A;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-vimeo-v {
+    background: #00a8e8;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-apple {
+    background: #313131;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  
+  .fab.fa-snapchat-ghost {
+    background: #FFFC00;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 17px;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+  }
+  </style>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="search-wrap">
+          <div class="input-group input-group-search">
+            <input id="searchService" type="search" name="search" class="form-control search-input" placeholder="Search Services" >
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+            </span>
+          </div>
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="servicefilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              FILTER CATEGORY
+            </button>
+            <div class="dropdown-menu" aria-labelledby="servicefilter">
+              <a value="All Category" ss="dropdown-item" onclick="allser()">All Category</a>
+                           
+              <a value="~ Best YouTube Services"  class="dropdown-item" onclick="filterService('~ Best YouTube Services')">~ Best YouTube Services</a>
+                                       
+              <a value="~ Discord Member"  class="dropdown-item" onclick="filterService('~ Discord Member')">~ Discord Member</a>
+                                       
+              <a value="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services"  class="dropdown-item" onclick="filterService('~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services')">~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services</a>
+                                       
+              <a value="~ Instagram | YouTube | Twitter| Quora Comments"  class="dropdown-item" onclick="filterService('~ Instagram | YouTube | Twitter| Quora Comments')">~ Instagram | YouTube | Twitter| Quora Comments</a>
+                                       
+
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="col-sm-12">
+  <div class="table-responsive">
+    <table class="table service-tablwa service-tablwa-V2 service-well ">
+                <thead data-category="~ Best YouTube Services" visible="true">
+                    <tr class="catetitle" data-category="~ Best YouTube Services" visible="true">
+                                                    <td colspan="8"><strong><i class="fab fa-youtube"></i>~ Best YouTube Services</strong></td>
+        </tr>
+                    <tr class="thead-tr" data-category="~ Best YouTube Services" visible="true">
+          <th>ID</th>
+          <th class="width-service-name">Service</th>
+          <th class="nowrap">Rate per 1000</th>
+          <!-- <th class="nowrap"></th> -->
+          <th class="nowrap">Min order/Max order</th>
+          <!-- <th>Status</th> -->
+          <th>Refill</th>
+                        <th class="nowrap">Average time
+            <span class="fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="The average time is based on 10 latest completed orders per 1000 quantity."></span>
+          </th>
+                                      <th class="service-description__th">Description</th>
+                      </tr>
+      </thead> 
+      <tbody data-category="~ Best YouTube Services" visible="true">
+
+
+                    <tr data-category="~ Best YouTube Services" visible="true">
+          <td>                                <span class="notif" data-id="4535">
+             
+            </span>
+                            <div class="id-boxi">
+              <span class="tits">ID</span>4535
+            </div>
+          </td>
+          <td class="service-name mk-icons">YouTube - Subscribers ( + Views  ) ~ Max 5k ~ 𝐑𝐄𝗔𝐋 ~ 𝗥𝗘𝗙𝗜𝗟𝗟 30D ~ 500-1k/days ~ 0-1Hrs</td>
+          <td><span class="tits">Rate per 1000</span>24.99</td>
+          <!-- <td><span class="tits">Min order</span>100</td> -->
+          <td><span class="tits">Max order</span>100/5000</td>
+          <!-- <td><span class="badge working">Working</span></td> -->
+          <td>
+                            <span class="badge gurantee">Refill 30 days</span>
+                          </td>
+                        <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4535">508 hours 14 minutes</span></td>
+                                      <td class="service-description">
+            <!-- Button trigger modal -->
+            <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4535">View Detail <!-- <i class="fas fa-info"></i> --></a>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal4535" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">YouTube - Subscribers ( + Views  ) ~ Max 5k ~ 𝐑𝐄𝗔𝐋 ~ 𝗥𝗘𝗙𝗜𝗟𝗟 30D ~ 500-1k/days ~ 0-1Hrs</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Link: https&#58;//youtube.com/channel/UC1BrWFtR1HadK_F_e8IpPqBA<br>Start: 0 - 1h<br>Refill: 30 days<br>Quality: 100 % real user<br>Speed: 200 - 500+/D<br>➜➜➜➜ Terms : ➜➜➜➜➜<br>➜ Order 1000 subs your video will get more than 5000 views (Rate 1 sub/5 views).If the video you placed is not eligible to receive views or your order by channel, we will randomly pick any video in the channel to increase views.<br><br>➜ The minimum order quantity is 100 subscribers and the maximum can be up to 100,000.<br>➜ Subscribers' speed is 500 to 1000/day, and we will notify you when the rate increases or decreases.<br>➜ Order link details: You can order through Youtube channels or video links. Videos or channels with age, country restrictions,  hidden subscribers, or any other blocking settings will not be able to order (The system will refund you immediately or after a few hours if the order is canceled).<br>➜ For example: When you order 100 subs, after a few hours your channel can get enough 100 subs, or sometimes Youtube will notify that you only get 80 or 90 subs...<br>Don't worry! at this point, your order status is still "running", and you may see that the subs are not continuing to increase, but our system has calculated and increased fully the subscribers for you. Youtube strictly controls the subscribers on its platform. Maybe Youtube will put some subscribers on the checklist, and the time is about 48 hours, then it will fully update the subscribers for you.<br>➜ Regarding the speed, it will still be 500 to 1000: If you make an order of 1000 subscribers, you will get almost 500 to ~1000 subs in about 24 hours, but it still takes 48 hours for Youtube to update fully. (Once you receive all the subs, our automated checking system will update your order status  to be completed, we will still follow it for the next few weeks)<br>➜ We know this is inconvenient for you, but our subscribers are real and safe.<br>➜ Note: On the same channel, you can't place an order when old orders have a running status, you need to wait for old orders to complete to be able to continue ordering
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+                      </tr>
+                    <tr data-category="~ Best YouTube Services" visible="true">
+          <td>                                <span class="notif" data-id="4982">
+             
+            </span>
+                            <div class="id-boxi">
+              <span class="tits">ID</span>4982
+            </div>
+          </td>
+          <td class="service-name mk-icons">YouTube - Adsense Earning Views ~ 2-5$ Earn ~ 1k-2k/days ~ Start 0-12Hrs</td>
+          <td><span class="tits">Rate per 1000</span>2.75</td>
+          <!-- <td><span class="tits">Min order</span>100</td> -->
+          <td><span class="tits">Max order</span>100/80000</td>
+          <!-- <td><span class="badge working">Working</span></td> -->
+          <td>
+                            <span class="badge gurantee">Refill 30 days</span>
+                          </td>
+                        <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4982">21 hours 12 minutes</span></td>
+                                      <td class="service-description">
+            <!-- Button trigger modal -->
+            <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4982">View Detail <!-- <i class="fas fa-info"></i> --></a>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal4982" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">YouTube - Adsense Earning Views ~ 2-5$ Earn ~ 1k-2k/days ~ Start 0-12Hrs</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Link: https&#58;//<br>Start: 0-12 hrs<br>Speed: 1k-2k/days<br>Refill: 30 days<br>Video Length: Must be 5 minutes+<br>Please Note: Revenue depends on different factors like keywords, length, topic, and location, etc.<br>- We Don't Guarantee How Much Revenue You Will Get? ( but 2 - 4$ estimated for 1000 views )<br>- Guarantee: If Revenue Dropped, We will Refill For Views Only, Not refill Revenue.<br>Here is some preview of 1k Views Earning : https://prnt.sc/1b39710
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+                      </tr>
+
+                      <tr data-category="~ Best YouTube Services" visible="true">
+                        <td>                                <span class="notif" data-id="4946">
+                           
+                          </span>
+                                          <div class="id-boxi">
+                            <span class="tits">ID</span>4946
+                          </div>
+                        </td>
+                        <td class="service-name mk-icons">YouTube - Short Video Views ~ 10k-20k/days ~ 𝐋𝐢𝐟𝐞𝐓𝐢𝐦𝐞 - INSTANT</td>
+                        <td><span class="tits">Rate per 1000</span>1.68</td>
+                        <!-- <td><span class="tits">Min order</span>100</td> -->
+                        <td><span class="tits">Max order</span>100/1000000</td>
+                        <!-- <td><span class="badge working">Working</span></td> -->
+                        <td>
+                                          <span class="badge gurantee">Refill Lifetime</span>
+                                        </td>
+                                      <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4946">15 hours 52 minutes</span></td>
+                                                    <td class="service-description">
+                          <!-- Button trigger modal -->
+                          <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4946">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal4946" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">YouTube - Short Video Views ~ 10k-20k/days ~ 𝐋𝐢𝐟𝐞𝐓𝐢𝐦𝐞 - INSTANT</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  Link: Short Video link<br>Speed: 10k-20k per day<br>Refill: Lifetime<br>Start: INSTANT
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                                    </tr>
+                                  <tr data-category="~ Best YouTube Services" visible="true">
+                        <td>                                <span class="notif" data-id="4919">
+                           
+                          </span>
+                                          <div class="id-boxi">
+                            <span class="tits">ID</span>4919
+                          </div>
+                        </td>
+                        <td class="service-name mk-icons">YouTube - Views ~ 20k/Days ~ 𝐋𝐢𝐟𝐞𝐓𝐢𝐦𝐞 - INSTANT</td>
+                        <td><span class="tits">Rate per 1000</span>1.32</td>
+                        <!-- <td><span class="tits">Min order</span>200</td> -->
+                        <td><span class="tits">Max order</span>200/100000000</td>
+                        <!-- <td><span class="badge working">Working</span></td> -->
+                        <td>
+                                          <span class="badge gurantee">Refill Lifetime</span>
+                                        </td>
+                                      <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4919">7 hours 57 minutes</span></td>
+                                                    <td class="service-description">
+                          <!-- Button trigger modal -->
+                          <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4919">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal4919" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">YouTube - Views ~ 20k/Days ~ 𝐋𝐢𝐟𝐞𝐓𝐢𝐦𝐞 - INSTANT</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  Link: https&#58;//www.youtube.com/watch?v=zx-BAU4ezv8<br>Start: INSTANT<br>Speed: 20k/days<br>Refill: Lifetime<br>Source: External, Facebook
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                                    </tr>
+                                  <tr data-category="~ Best YouTube Services" visible="true">
+                        <td>                                <span class="notif" data-id="4424">
+                           
+                          </span>
+                                          <div class="id-boxi">
+                            <span class="tits">ID</span>4424
+                          </div>
+                        </td>
+                        <td class="service-name mk-icons">YouTube - Views ~ 100k/Days ~ 𝐋𝐢𝐟𝐞𝐓𝐢𝐦𝐞 ~ Good For Ranking ~ INSTANT</td>
+                        <td><span class="tits">Rate per 1000</span>1.68</td>
+                        <!-- <td><span class="tits">Min order</span>100</td> -->
+                        <td><span class="tits">Max order</span>100/1850000</td>
+                        <!-- <td><span class="badge working">Working</span></td> -->
+                        <td>
+                                          <span class="badge gurantee">Refill Lifetime</span>
+                                        </td>
+                                      <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4424">2 hours 39 minutes</span></td>
+                                                    <td class="service-description">
+                          <!-- Button trigger modal -->
+                          <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4424">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal4424" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">YouTube - Views ~ 100k/Days ~ 𝐋𝐢𝐟𝐞𝐓𝐢𝐦𝐞 ~ Good For Ranking ~ INSTANT</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  Link: https&#58;//www.youtube.com/watch?v=Pp7aDdyLhqY<br>Refill: Lifetime<br>Start: 6-12Hrs <br>Speed: 100k/days<br>Source: External
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                                    </tr>
+                                  </tbody>
+                                  <thead data-category="~ Discord Member" visible="true">
+                                      <tr class="catetitle" data-category="~ Discord Member" visible="true">
+                                                                      <td colspan="8"><strong><i class="fab fa-thumbs-up"></i>~ Discord Member</strong></td>
+                          </tr>
+                                      <tr class="thead-tr" data-category="~ Discord Member" visible="true">
+                            <th>ID</th>
+                            <th class="width-service-name">Service</th>
+                            <th class="nowrap">Rate per 1000</th>
+                            <!-- <th class="nowrap"></th> -->
+                            <th class="nowrap">Min order/Max order</th>
+                            <!-- <th>Status</th> -->
+                            <th>Refill</th>
+                                          <th class="nowrap">Average time
+                              <span class="fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="The average time is based on 10 latest completed orders per 1000 quantity."></span>
+                            </th>
+                                                        <th class="service-description__th">Description</th>
+                                        </tr>
+                        </thead> 
+                        <tbody data-category="~ Discord Member" visible="true">
+              
+              
+                                      <tr data-category="~ Discord Member" visible="true">
+                            <td>                                <span class="notif" data-id="4983">
+                               
+                              </span>
+                                              <div class="id-boxi">
+                                <span class="tits">ID</span>4983
+                              </div>
+                            </td>
+                            <td class="service-name mk-icons">Discord - 🟢𝐎𝐧𝐥𝐢𝐧𝐞 Member ~ Monthly ~ Max 2k</td>
+                            <td><span class="tits">Rate per 1000</span>68.75</td>
+                            <!-- <td><span class="tits">Min order</span>100</td> -->
+                            <td><span class="tits">Max order</span>100/2000</td>
+                            <!-- <td><span class="badge working">Working</span></td> -->
+                            <td>
+                                              <span class="badge gurantee not-gurantee">No Refill</span>
+                                            </td>
+                                          <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4983">4 hours 46 minutes</span></td>
+                                                        <td class="service-description">
+                              <!-- Button trigger modal -->
+                              <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4983">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal4983" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Discord - 🟢𝐎𝐧𝐥𝐢𝐧𝐞 Member ~ Monthly ~ Max 2k</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Link: https&#58;//discord.com/invite/qk7cq977<br>Start: 0-15 min<br>Speed: Instant -1hrs<br>Refill: No refill<br>Note: Member will be online for a month. If you order 100 members, the 100 members will be shown online for a month. Price for every 1000 Online member
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                                        </tr>
+                                      <tr data-category="~ Discord Member" visible="true">
+                            <td>                                <span class="notif" data-id="4984">
+                               
+                              </span>
+                                              <div class="id-boxi">
+                                <span class="tits">ID</span>4984
+                              </div>
+                            </td>
+                            <td class="service-name mk-icons">Discord - 🟢𝐎𝐧𝐥𝐢𝐧𝐞 Member ~ Monthly ~ With Status Activity ~ Max 2.4k</td>
+                            <td><span class="tits">Rate per 1000</span>87.50</td>
+                            <!-- <td><span class="tits">Min order</span>100</td> -->
+                            <td><span class="tits">Max order</span>100/2400</td>
+                            <!-- <td><span class="badge working">Working</span></td> -->
+                            <td>
+                                              <span class="badge gurantee not-gurantee">No Refill</span>
+                                            </td>
+                                          <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4984">3 hours 52 minutes</span></td>
+                                                        <td class="service-description">
+                              <!-- Button trigger modal -->
+                              <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4984">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal4984" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Discord - 🟢𝐎𝐧𝐥𝐢𝐧𝐞 Member ~ Monthly ~ With Status Activity ~ Max 2.4k</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Link: https&#58;//discord.com/invite/qk7cq977<br>Start: 0-15 min<br>Speed: Instant -1hrs<br>Refill: No refill<br>Note: High Quality, They will have status on their profile. Member will be online for a month. If you order 100 members, the 100 members will be shown online for a month. Price for every 1000 Online member
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                                        </tr>
+                                      <tr data-category="~ Discord Member" visible="true">
+                            <td>                                <span class="notif" data-id="4462">
+                               
+                              </span>
+                                              <div class="id-boxi">
+                                <span class="tits">ID</span>4462
+                              </div>
+                            </td>
+                            <td class="service-name mk-icons">Discord ~ Server Member ~ 𝐁𝗢𝗧 ~ Max 750k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 1K/Days ~ INSTANT</td>
+                            <td><span class="tits">Rate per 1000</span>2.605</td>
+                            <!-- <td><span class="tits">Min order</span>100</td> -->
+                            <td><span class="tits">Max order</span>100/750000</td>
+                            <!-- <td><span class="badge working">Working</span></td> -->
+                            <td>
+                                              <span class="badge gurantee not-gurantee">No Refill</span>
+                                            </td>
+                                          <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4462">8 hours 31 minutes</span></td>
+                                                        <td class="service-description">
+                              <!-- Button trigger modal -->
+                              <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4462">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal4462" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Discord ~ Server Member ~ 𝐁𝗢𝗧 ~ Max 750k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 1K/Days ~ INSTANT</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Link: https&#58;//discord.gg/QKnBcfwx<br>Location: Mixed<br>Quality: Bot<br>Start: 0-60 Minutes<br>Speed: 1k/days<br>Refill: No Refill
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                                        </tr>
+
+                                      </tr>
+                                      <tr data-category="~ Discord Member" visible="true">
+                            <td>                                <span class="notif" data-id="4466">
+                               
+                              </span>
+                                              <div class="id-boxi">
+                                <span class="tits">ID</span>4466
+                              </div>
+                            </td>
+                            <td class="service-name mk-icons">Discord ~ Server Member ~ Male ~ Max 1k ~ 1K/Days ~ 0-1 Hours</td>
+                            <td><span class="tits">Rate per 1000</span>2.605</td>
+                            <!-- <td><span class="tits">Min order</span>100</td> -->
+                            <td><span class="tits">Max order</span>100/50000</td>
+                            <!-- <td><span class="badge working">Working</span></td> -->
+                            <td>
+                                              <span class="badge gurantee not-gurantee">No Refill</span>
+                                            </td>
+                                          <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4466">29 hours 15 minutes</span></td>
+                                                        <td class="service-description">
+                              <!-- Button trigger modal -->
+                              <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4466">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal4466" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Discord ~ Server Member ~ Male ~ Max 1k ~ 1K/Days ~ 0-1 Hours</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Link: https&#58;//discord.gg/QKnBcfwx<br>Location: Mixed<br>Quality: Turkish Real <br>Start: 0-60 Minutes<br>Speed: 1k/days<br>Refill: 30days
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                                        </tr>
+                                      <tr data-category="~ Discord Member" visible="true">
+                            <td>                                <span class="notif" data-id="4474">
+                               
+                              </span>
+                                              <div class="id-boxi">
+                                <span class="tits">ID</span>4474
+                              </div>
+                            </td>
+                            <td class="service-name mk-icons">Discord ~ Server Member ~ Female ~ Max 1k ~ 1K/Days ~ 0-1 Hours</td>
+                            <td><span class="tits">Rate per 1000</span>2.605</td>
+                            <!-- <td><span class="tits">Min order</span>100</td> -->
+                            <td><span class="tits">Max order</span>100/50000</td>
+                            <!-- <td><span class="badge working">Working</span></td> -->
+                            <td>
+                                              <span class="badge gurantee not-gurantee">No Refill</span>
+                                            </td>
+                                          <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4474">32 hours 9 minutes</span></td>
+                                                        <td class="service-description">
+                              <!-- Button trigger modal -->
+                              <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4474">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal4474" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Discord ~ Server Member ~ Female ~ Max 1k ~ 1K/Days ~ 0-1 Hours</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Link: https&#58;//discord.gg/QKnBcfwx<br>Location: Mixed<br>Quality: Turkish Real <br>Start: 0-60 Minutes<br>Speed: 1k/days<br>Refill: 30days
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                                        </tr>
+                                      <tr data-category="~ Discord Member" visible="true">
+                            <td>                                <span class="notif" data-id="4472">
+                               
+                              </span>
+                                              <div class="id-boxi">
+                                <span class="tits">ID</span>4472
+                              </div>
+                            </td>
+                            <td class="service-name mk-icons">Discord ~ Server Member ~ 𝐑𝐄𝗔𝐋 Look ~ Max 20k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 1K/Days ~ INSTANT</td>
+                            <td><span class="tits">Rate per 1000</span>4.74</td>
+                            <!-- <td><span class="tits">Min order</span>100</td> -->
+                            <td><span class="tits">Max order</span>100/400000</td>
+                            <!-- <td><span class="badge working">Working</span></td> -->
+                            <td>
+                                              <span class="badge gurantee not-gurantee">No Refill</span>
+                                            </td>
+                                          <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4472">7 hours 6 minutes</span></td>
+                                                        <td class="service-description">
+                              <!-- Button trigger modal -->
+                              <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4472">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal4472" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Discord ~ Server Member ~ 𝐑𝐄𝗔𝐋 Look ~ Max 20k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 1K/Days ~ INSTANT</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Link: https&#58;//discord.gg/QKnBcfwx<br>Start: 0-60 Minutes<br>Speed: 1k/days<br>Refill: No Refill<br>Location: Mixed<br>Quality: Real Look
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            </tr>
+                          </tbody>
+                          <thead data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                              <tr class="catetitle" data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                                                              <td colspan="8"><strong><i class="fab fa-facebook-square"></i>~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services</strong></td>
+                  </tr>
+                              <tr class="thead-tr" data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <th>ID</th>
+                    <th class="width-service-name">Service</th>
+                    <th class="nowrap">Rate per 1000</th>
+                    <!-- <th class="nowrap"></th> -->
+                    <th class="nowrap">Min order/Max order</th>
+                    <!-- <th>Status</th> -->
+                    <th>Refill</th>
+                                  <th class="nowrap">Average time
+                      <span class="fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="The average time is based on 10 latest completed orders per 1000 quantity."></span>
+                    </th>
+                                                <th class="service-description__th">Description</th>
+                                </tr>
+                </thead> 
+                <tbody data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+      
+      
+                              <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <td>                                <span class="notif" data-id="4969">
+                       
+                      </span>
+                                      <div class="id-boxi">
+                        <span class="tits">ID</span>4969
+                      </div>
+                    </td>
+                    <td class="service-name mk-icons">Facebook - Egyptian Page Likes + Followers ~ 1k-2k/days ~ R90D ~ INSTANT</td>
+                    <td><span class="tits">Rate per 1000</span>2.125</td>
+                    <!-- <td><span class="tits">Min order</span>1000</td> -->
+                    <td><span class="tits">Max order</span>1000/25000</td>
+                    <!-- <td><span class="badge working">Working</span></td> -->
+                    <td>
+                                      <span class="badge gurantee">Refill 90 days</span>
+                                    </td>
+                                  <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4969">10 hours 8 minutes</span></td>
+                                                <td class="service-description">
+                      <!-- Button trigger modal -->
+                      <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4969">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal4969" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Page Likes + Followers ~ 1k-2k/days ~ R90D ~ INSTANT</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Link: https&#58;//www.facebook.com/pageusername<br>Start: Instant<br>Speed: 1k-2k/days<br>Refill: 90 days
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                                </tr>
+                              <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <td>                                <span class="notif" data-id="4970">
+                       
+                      </span>
+                                      <div class="id-boxi">
+                        <span class="tits">ID</span>4970
+                      </div>
+                    </td>
+                    <td class="service-name mk-icons">Facebook - Egyptian Profile Followers ~ 1k-2k/days ~ R90D ~ INSTANT</td>
+                    <td><span class="tits">Rate per 1000</span>2.125</td>
+                    <!-- <td><span class="tits">Min order</span>1000</td> -->
+                    <td><span class="tits">Max order</span>1000/25000</td>
+                    <!-- <td><span class="badge working">Working</span></td> -->
+                    <td>
+                                      <span class="badge gurantee">Refill 90 days</span>
+                                    </td>
+                                  <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4970">Not enough data</span></td>
+                                                <td class="service-description">
+                      <!-- Button trigger modal -->
+                      <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4970">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal4970" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Profile Followers ~ 1k-2k/days ~ R90D ~ INSTANT</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Link: https&#58;//www.facebook.com/profileusername<br>Start: Instant<br>Speed: 1k-2k/days<br>Refill: 90 days
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                                </tr>
+                              <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <td>                                <span class="notif" data-id="4971">
+                       
+                      </span>
+                                      <div class="id-boxi">
+                        <span class="tits">ID</span>4971
+                      </div>
+                    </td>
+                    <td class="service-name mk-icons">Facebook - Egyptian Page Likes + Followers ~ 1k-2k/days ~ R60D ~ INSTANT</td>
+                    <td><span class="tits">Rate per 1000</span>2.138</td>
+                    <!-- <td><span class="tits">Min order</span>1000</td> -->
+                    <td><span class="tits">Max order</span>1000/30000</td>
+                    <!-- <td><span class="badge working">Working</span></td> -->
+                    <td>
+                                      <span class="badge gurantee">Refill 60 days</span>
+                                    </td>
+                                  <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4971">Not enough data</span></td>
+                                                <td class="service-description">
+                      <!-- Button trigger modal -->
+                      <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4971">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal4971" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Page Likes + Followers ~ 1k-2k/days ~ R60D ~ INSTANT</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Link: https&#58;//www.facebook.com/pageusername<br>Start: Instant<br>Speed: 1k-2k/days<br>Refill: 60 days
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                                </tr>
+                              <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <td>                                <span class="notif" data-id="4972">
+                       
+                      </span>
+                                      <div class="id-boxi">
+                        <span class="tits">ID</span>4972
+                      </div>
+                    </td>
+                    <td class="service-name mk-icons">Facebook - Egyptian Profile Followers ~ 1k-2k/days ~ R60D ~ INSTANT</td>
+                    <td><span class="tits">Rate per 1000</span>2.138</td>
+                    <!-- <td><span class="tits">Min order</span>1000</td> -->
+                    <td><span class="tits">Max order</span>1000/30000</td>
+                    <!-- <td><span class="badge working">Working</span></td> -->
+                    <td>
+                                      <span class="badge gurantee">Refill 60 days</span>
+                                    </td>
+                                  <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4972">Not enough data</span></td>
+                                                <td class="service-description">
+                      <!-- Button trigger modal -->
+                      <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4972">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal4972" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Profile Followers ~ 1k-2k/days ~ R60D ~ INSTANT</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Link: https&#58;//www.facebook.com/profileusername<br>Start: Instant<br>Speed: 1k-2k/days<br>Refill: 60 days
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                                </tr>
+                              <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <td>                                <span class="notif" data-id="4973">
+                       
+                      </span>
+                                      <div class="id-boxi">
+                        <span class="tits">ID</span>4973
+                      </div>
+                    </td>
+                    <td class="service-name mk-icons">Facebook - Egyptian Profile Followers ~ 1k-3k/days ~ R60D ~ INSTANT</td>
+                    <td><span class="tits">Rate per 1000</span>2.25</td>
+                    <!-- <td><span class="tits">Min order</span>100</td> -->
+                    <td><span class="tits">Max order</span>100/5000</td>
+                    <!-- <td><span class="badge working">Working</span></td> -->
+                    <td>
+                                      <span class="badge gurantee">Refill 60 days</span>
+                                    </td>
+                                  <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4973">Not enough data</span></td>
+                                                <td class="service-description">
+                      <!-- Button trigger modal -->
+                      <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4973">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal4973" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Profile Followers ~ 1k-3k/days ~ R60D ~ INSTANT</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Link: https&#58;//www.facebook.com/profileusername<br>Start: Instant<br>Speed: 1k-2k/days<br>Refill: 60 days<br>Quality: High Quality Accounts
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                                </tr>
+                              <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <td>                                <span class="notif" data-id="4974">
+                       
+                      </span>
+                                      <div class="id-boxi">
+                        <span class="tits">ID</span>4974
+                      </div>
+                    </td>
+                    <td class="service-name mk-icons">Facebook - Egyptian Page Likes ~ 1k-3k/days ~ R60D ~ INSTANT</td>
+                    <td><span class="tits">Rate per 1000</span>2.35</td>
+                    <!-- <td><span class="tits">Min order</span>100</td> -->
+                    <td><span class="tits">Max order</span>100/5000</td>
+                    <!-- <td><span class="badge working">Working</span></td> -->
+                    <td>
+                                      <span class="badge gurantee">Refill 60 days</span>
+                                    </td>
+                                  <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4974">Not enough data</span></td>
+                                                <td class="service-description">
+                      <!-- Button trigger modal -->
+                      <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4974">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal4974" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Page Likes ~ 1k-3k/days ~ R60D ~ INSTANT</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              Link: https&#58;//www.facebook.com/pageusername<br>Start: Instant-12hrs<br>Speed: 1k-3k/days<br>Refill: 60 days
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                                </tr>
+                              <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                    <td>                                <span class="notif" data-id="4975">
+                       
+                      </span>
+                                      <div class="id-boxi">
+                        <span class="tits">ID</span>4975
+                      </div>
+                    </td>
+                    <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                      <td>                                <span class="notif" data-id="4978">
+                         
+                        </span>
+                                        <div class="id-boxi">
+                          <span class="tits">ID</span>4978
+                        </div>
+                      </td>
+                      <td class="service-name mk-icons">Facebook - Egyptian Post Reaction ~ HAHA ~ 1k-3k/days ~ R60D ~ INSTANT</td>
+                      <td><span class="tits">Rate per 1000</span>1.50</td>
+                      <!-- <td><span class="tits">Min order</span>300</td> -->
+                      <td><span class="tits">Max order</span>300/5000</td>
+                      <!-- <td><span class="badge working">Working</span></td> -->
+                      <td>
+                                        <span class="badge gurantee">Refill 60 days</span>
+                                      </td>
+                                    <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4978">Not enough data</span></td>
+                                                  <td class="service-description">
+                        <!-- Button trigger modal -->
+                        <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4978">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4978" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Post Reaction ~ HAHA ~ 1k-3k/days ~ R60D ~ INSTANT</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Link: https&#58;//www.facebook.com/post/1212121212121<br>Start: Instant-12hrs<br>Speed: 1k-3k/days<br>Refill: 60 days
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                                  </tr>
+                                <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                      <td>                                <span class="notif" data-id="4979">
+                         
+                        </span>
+                                        <div class="id-boxi">
+                          <span class="tits">ID</span>4979
+                        </div>
+                      </td>
+                      <td class="service-name mk-icons">Facebook - Egyptian Post Reaction ~ SAD ~ 1k-3k/days ~ R60D ~ INSTANT</td>
+                      <td><span class="tits">Rate per 1000</span>1.50</td>
+                      <!-- <td><span class="tits">Min order</span>300</td> -->
+                      <td><span class="tits">Max order</span>300/5000</td>
+                      <!-- <td><span class="badge working">Working</span></td> -->
+                      <td>
+                                        <span class="badge gurantee">Refill 60 days</span>
+                                      </td>
+                                    <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4979">Not enough data</span></td>
+                                                  <td class="service-description">
+                        <!-- Button trigger modal -->
+                        <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4979">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4979" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Post Reaction ~ SAD ~ 1k-3k/days ~ R60D ~ INSTANT</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Link: https&#58;//www.facebook.com/post/1212121212121<br>Start: Instant-12hrs<br>Speed: 1k-3k/days<br>Refill: 60 days
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                                  </tr>
+                                <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                      <td>                                <span class="notif" data-id="4980">
+                         
+                        </span>
+                                        <div class="id-boxi">
+                          <span class="tits">ID</span>4980
+                        </div>
+                      </td>
+                      <td class="service-name mk-icons">Facebook - Egyptian Post Reaction ~ Angry ~ 1k-3k/days ~ R60D ~ INSTANT</td>
+                      <td><span class="tits">Rate per 1000</span>1.50</td>
+                      <!-- <td><span class="tits">Min order</span>300</td> -->
+                      <td><span class="tits">Max order</span>300/5000</td>
+                      <!-- <td><span class="badge working">Working</span></td> -->
+                      <td>
+                                        <span class="badge gurantee">Refill 60 days</span>
+                                      </td>
+                                    <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4980">Not enough data</span></td>
+                                                  <td class="service-description">
+                        <!-- Button trigger modal -->
+                        <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4980">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4980" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Post Reaction ~ Angry ~ 1k-3k/days ~ R60D ~ INSTANT</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Link: https&#58;//www.facebook.com/post/1212121212121<br>Start: Instant-12hrs<br>Speed: 1k-3k/days<br>Refill: 60 days
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                                  </tr>
+                                <tr data-category="~ Facebook - 𝐄𝐠𝐲𝐩𝐭 🏳️Services" visible="true">
+                      <td>                                <span class="notif" data-id="4981">
+                         
+                        </span>
+                                        <div class="id-boxi">
+                          <span class="tits">ID</span>4981
+                        </div>
+                      </td>
+                      <td class="service-name mk-icons">Facebook - Egyptian Custom Comment ~ 100-1k/days ~ R30D ~ 12-24Hrs</td>
+                      <td><span class="tits">Rate per 1000</span>15.875</td>
+                      <!-- <td><span class="tits">Min order</span>100</td> -->
+                      <td><span class="tits">Max order</span>100/100000</td>
+                      <!-- <td><span class="badge working">Working</span></td> -->
+                      <td>
+                                        <span class="badge gurantee">Refill 60 days</span>
+                                      </td>
+                                    <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4981">Not enough data</span></td>
+                                                  <td class="service-description">
+                        <!-- Button trigger modal -->
+                        <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4981">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4981" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Facebook - Egyptian Custom Comment ~ 100-1k/days ~ R30D ~ 12-24Hrs</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Link: https&#58;//www.facebook.com/post/1212121212121<br>Start: Instant-12hrs<br>Speed: 1k-3k/days<br>Refill: 60 days
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                                  </tr>
+                    
+                  </tbody>
+                            <thead data-category="~ Instagram | YouTube | Twitter| Quora Comments" visible="true">
+                                <tr class="catetitle" data-category="~ Instagram | YouTube | Twitter| Quora Comments" visible="true">
+                                                                <td colspan="8"><strong><i class="fab fa-instagram"></i>~ Instagram | YouTube | Twitter| Quora Comments</strong></td>
+                    </tr>
+                                <tr class="thead-tr" data-category="~ Instagram | YouTube | Twitter| Quora Comments" visible="true">
+                      <th>ID</th>
+                      <th class="width-service-name">Service</th>
+                      <th class="nowrap">Rate per 1000</th>
+                      <!-- <th class="nowrap"></th> -->
+                      <th class="nowrap">Min order/Max order</th>
+                      <!-- <th>Status</th> -->
+                      <th>Refill</th>
+                                    <th class="nowrap">Average time
+                        <span class="fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="The average time is based on 10 latest completed orders per 1000 quantity."></span>
+                      </th>
+                                                  <th class="service-description__th">Description</th>
+                                  </tr>
+                  </thead> 
+                  <tbody data-category="~ Instagram | YouTube | Twitter| Quora Comments" visible="true">
+        
+        
+                                <tr data-category="~ Instagram | YouTube | Twitter| Quora Comments" visible="true">
+                      <td>                                <span class="notif" data-id="4949">
+                         
+                        </span>
+                                        <div class="id-boxi">
+                          <span class="tits">ID</span>4949
+                        </div>
+                      </td>
+                      <td class="service-name mk-icons">Instagram - Comment ~ China ~ Max 1k ~ 𝗥𝗘𝗙𝗜𝗟𝗟 90D ~ INSTANt</td>
+                      <td><span class="tits">Rate per 1000</span>37.50</td>
+                      <!-- <td><span class="tits">Min order</span>2</td> -->
+                      <td><span class="tits">Max order</span>2/1000</td>
+                      <!-- <td><span class="badge working">Working</span></td> -->
+                      <td>
+                                        <span class="badge gurantee">Refill 90 days</span>
+                                      </td>
+                                    <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4949">Not enough data</span></td>
+                                                  <td class="service-description">
+                        <!-- Button trigger modal -->
+                        <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4949">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4949" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Instagram - Comment ~ China ~ Max 1k ~ 𝗥𝗘𝗙𝗜𝗟𝗟 90D ~ INSTANt</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Link: https&#58;//Instagram.com/p/asasasaasa<br>Speed: 200-500 hrs<br>Refill: 90 days<br>Start: INSTANT
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                                  </tr>
+                                <tr data-category="~ Instagram | YouTube | Twitter| Quora Comments" visible="true">
+                      <td>                                <span class="notif" data-id="4950">
+                         
+                        </span>
+                                        <div class="id-boxi">
+                          <span class="tits">ID</span>4950
+                        </div>
+                      </td>
+                      <td class="service-name mk-icons">Twitter - Comment ~ USA ~ Max 1k ~ 𝗥𝗘𝗙𝗜𝗟𝗟 90D ~ INSTANt</td>
+                      <td><span class="tits">Rate per 1000</span>37.50</td>
+                      <!-- <td><span class="tits">Min order</span>2</td> -->
+                      <td><span class="tits">Max order</span>2/1000</td>
+                      <!-- <td><span class="badge working">Working</span></td> -->
+                      <td>
+                                        <span class="badge gurantee">Refill 90 days</span>
+                                      </td>
+                                    <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4950">180 hours 14 minutes</span></td>
+                                                  <td class="service-description">
+                        <!-- Button trigger modal -->
+                        <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4950">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4950" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Twitter - Comment ~ USA ~ Max 1k ~ 𝗥𝗘𝗙𝗜𝗟𝗟 90D ~ INSTANt</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Link: https&#58;//twitter.com/emirates/status/1443870850135284224<br>Speed: 200-500 hrs<br>Refill: 90 days<br>Start: INSTANT
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      </tr>
+                    </tbody>
+                    <thead data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+                        <tr class="catetitle" data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+                                                        <td colspan="8"><strong><i class="fab fa-instagram"></i>~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀</strong></td>
+            </tr>
+                        <tr class="thead-tr" data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <th>ID</th>
+              <th class="width-service-name">Service</th>
+              <th class="nowrap">Rate per 1000</th>
+              <!-- <th class="nowrap"></th> -->
+              <th class="nowrap">Min order/Max order</th>
+              <!-- <th>Status</th> -->
+              <th>Refill</th>
+                            <th class="nowrap">Average time
+                <span class="fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="The average time is based on 10 latest completed orders per 1000 quantity."></span>
+              </th>
+                                          <th class="service-description__th">Description</th>
+                          </tr>
+          </thead> 
+          <tbody data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+
+
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="196">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>196
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram - Female Followers ~ 100% REAL, ACTIVE ~ Followers for Brands ~ 5.25$/50 Followers</td>
+              <td><span class="tits">Rate per 1000</span>5.25</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-196">4 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal196">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal196" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram - Female Followers ~ 100% REAL, ACTIVE ~ Followers for Brands ~ 5.25$/50 Followers</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ~ VERY VERY HIGH-QUALITY ACCOUNTS<br>~ 40 FEMALE FOLLOWERS ONLY <br>Order of 1000 = 50 followers<br>~ Service offers Real Followers that are used by Big Bloggers & Influencers to send real followers to BRANDS accounts when they do ADS for them.<br>~ Put the link of the account you need to send the REAL 100% REAL followers.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="4543">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>4543
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram ~ Comments from Female Accounts ~ 8.125$ Per 80 comment</td>
+              <td><span class="tits">Rate per 1000</span>8.125</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4543">Not enough data</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4543">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal4543" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram ~ Comments from Female Accounts ~ 8.125$ Per 80 comment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="3339">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3339
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram ~ Comments from Accounts of 10k+ Followers ~ 1.8$ Per 5 comment</td>
+              <td><span class="tits">Rate per 1000</span>1.80</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3339">21 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3339">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3339" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram ~ Comments from Accounts of 10k+ Followers ~ 1.8$ Per 5 comment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Start: 24hrs<br>Refill: Non-Drop <br>Delivery: 1 Hour<br>Quality: Verified Users (Custom Positive Comment)<br><br>No Inappropriate Posts Allowed (Including Sexual, Racist, Etc)<br>5 comments (per 1000 order quantity)<br>All comments from accounts with 10 000+ Followers
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="3340">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3340
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram ~ Comments from Accounts of 10k+ Followers ~3.6$ Per 10 comment</td>
+              <td><span class="tits">Rate per 1000</span>3.60</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3340">3 hours 20 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3340">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3340" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram ~ Comments from Accounts of 10k+ Followers ~3.6$ Per 10 comment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Start: 24hrs<br>Refill: Non-Drop <br>Delivery: 1 Hour<br>Quality: Verified Users (Custom Positive Comment)<br><br>No Inappropriate Posts Allowed (Including Sexual, Racist, Etc)<br>10 comments (per 1000 order quantity)<br>All comments from accounts with 10 000+ Followers
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="3344">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3344
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram - Comments from Female Account ~ 9.6$ Per 50 comment</td>
+              <td><span class="tits">Rate per 1000</span>5.40</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3344">5 hours 10 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3344">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3344" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram - Comments from Female Account ~ 9.6$ Per 50 comment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Start: 24hrs<br>Refill: Non-Drop <br>Delivery: 1 Hour<br>Quality: Verified Users (Custom Positive Comment)<br><br>No Inappropriate Posts Allowed (Including Sexual, Racist, Etc)<br>15 comment (per 1000 order quantity) <br>Arabic Comments<br>All comments from accounts with 10 000+ Followers
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="3342">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3342
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram - Arabic Comments from Accounts of 10k+ Followers ~ 1.8$ Per 5 comment</td>
+              <td><span class="tits">Rate per 1000</span>1.80</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3342">2 hours 44 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3342">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3342" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram - Arabic Comments from Accounts of 10k+ Followers ~ 1.8$ Per 5 comment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Start: 24hrs<br>Refill: Non-Drop <br>Delivery: 1 Hour<br>Quality: Verified Users (Custom Positive Comment)<br><br>No Inappropriate Posts Allowed (Including Sexual, Racist, Etc)<br>5 comment (per 1000 order quantity) <br>Arabic Comments<br>All comments from accounts with 10 000+ Followers
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="3343">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3343
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram - Arabic Comments from Accounts of 10k+ Followers ~ 3.6$ Per 10 comment</td>
+              <td><span class="tits">Rate per 1000</span>3.60</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3343">2 hours 54 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3343">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3343" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram - Arabic Comments from Accounts of 10k+ Followers ~ 3.6$ Per 10 comment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Start: 24hrs<br>Refill: Non-Drop <br>Delivery: 1 Hour<br>Quality: Verified Users (Custom Positive Comment)<br><br>No Inappropriate Posts Allowed (Including Sexual, Racist, Etc)<br>10 comment (per 1000 order quantity) <br>Arabic Comments<br>All comments from accounts with 10 000+ Followers
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Instagram 10k+ 𝗙𝗼𝗹𝗹𝗼𝘄𝗲𝗿𝘀 | 𝗖𝗼𝗺𝗺𝗲𝗻𝘁𝘀" visible="true">
+              <td>                                <span class="notif" data-id="3341">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3341
+                </div>
+              </td>
+              <td class="service-name mk-icons">Instagram ~ Comments from Accounts of 10k+ Followers ~ 5.4$ Per 15 comment</td>
+              <td><span class="tits">Rate per 1000</span>4.80</td>
+              <!-- <td><span class="tits">Min order</span>1000</td> -->
+              <td><span class="tits">Max order</span>1000/1000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3341">10 hours 40 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3341">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3341" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instagram ~ Comments from Accounts of 10k+ Followers ~ 5.4$ Per 15 comment</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Start: 24hrs<br>Refill: Non-Drop <br>Delivery: 1 Hour<br>Quality: Verified Users (Custom Positive Comment)<br><br>No Inappropriate Posts Allowed (Including Sexual, Racist, Etc)<br>15 comment (per 1000 order quantity)<br>All comments from accounts with 10 000+ Followers
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+            
+          </tbody>
+                    <thead data-category="~ Telegram" visible="true">
+                        <tr class="catetitle" data-category="~ Telegram" visible="true">
+                                                        <td colspan="8"><strong><i class="fab fa-telegram"></i>~ Telegram</strong></td>
+            </tr>
+                        <tr class="thead-tr" data-category="~ Telegram" visible="true">
+              <th>ID</th>
+              <th class="width-service-name">Service</th>
+              <th class="nowrap">Rate per 1000</th>
+              <!-- <th class="nowrap"></th> -->
+              <th class="nowrap">Min order/Max order</th>
+              <!-- <th>Status</th> -->
+              <th>Refill</th>
+                            <th class="nowrap">Average time
+                <span class="fa fa-exclamation-circle" data-toggle="tooltip" data-placement="top" title="The average time is based on 10 latest completed orders per 1000 quantity."></span>
+              </th>
+                                          <th class="service-description__th">Description</th>
+                          </tr>
+          </thead> 
+          <tbody data-category="~ Telegram" visible="true">
+
+
+                        <tr data-category="~ Telegram" visible="true">
+              <td>                                <span class="notif" data-id="3114">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3114
+                </div>
+              </td>
+              <td class="service-name mk-icons">Telegram - Channel/Group Members  ~ Max 200k ~ 𝗥𝗘𝗙𝗜𝗟𝗟 30D ~ 50k/days ~ Start 0-2Hr</td>
+              <td><span class="tits">Rate per 1000</span>0.96</td>
+              <!-- <td><span class="tits">Min order</span>10</td> -->
+              <td><span class="tits">Max order</span>10/200000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee">Refill 30 days</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3114">21 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3114">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3114" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Telegram - Channel/Group Members  ~ Max 200k ~ 𝗥𝗘𝗙𝗜𝗟𝗟 30D ~ 50k/days ~ Start 0-2Hr</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Link: https&#58;//t.me/username<br>Start: 0-2 Hour<br>Speed: 5000/D<br>Refill: 30 days<br>Quality: Mixed<br>If you have changed the link or the channel is deleted there will be no cancellation of orders<br>NO refill for more than 100k+ member channel
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Telegram" visible="true">
+              <td>                                <span class="notif" data-id="3115">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>3115
+                </div>
+              </td>
+              <td class="service-name mk-icons">Telegram - Channel/Group Members ~ 𝐁𝗢𝗧 ~ Max 1k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 10k/days ~ INSTANT</td>
+              <td><span class="tits">Rate per 1000</span>0.30</td>
+              <!-- <td><span class="tits">Min order</span>1</td> -->
+              <td><span class="tits">Max order</span>1/3000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-3115">22143 hours 37 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal3115">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3115" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Telegram - Channel/Group Members ~ 𝐁𝗢𝗧 ~ Max 1k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 10k/days ~ INSTANT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Link: https&#58;//t.me/username<br>Start: 1-30 min<br>Speed: 5000/D<br>Refill: No Refill<br>Quality: BOT<br>If you have changed the link or the channel is deleted there will be no cancellation of orders
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        <tr data-category="~ Telegram" visible="true">
+              <td>                                <span class="notif" data-id="4528">
+                 
+                </span>
+                                <div class="id-boxi">
+                  <span class="tits">ID</span>4528
+                </div>
+              </td>
+              <td class="service-name mk-icons">Telegram - Channel/Group Members ~ 𝐁𝗢𝗧 ~ Max 6k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 10k/days ~ INSTANT</td>
+              <td><span class="tits">Rate per 1000</span>0.54</td>
+              <!-- <td><span class="tits">Min order</span>500</td> -->
+              <td><span class="tits">Max order</span>500/7000</td>
+              <!-- <td><span class="badge working">Working</span></td> -->
+              <td>
+                                <span class="badge gurantee not-gurantee">No Refill</span>
+                              </td>
+                            <td class="nowrap "><span class="tits">Average time</span><span class="average-time ser-id-4528">13 minutes</span></td>
+                                          <td class="service-description">
+                <!-- Button trigger modal -->
+                <a type="button" class="description-btn" data-toggle="modal" data-target="#exampleModal4528">View Detail <!-- <i class="fas fa-info"></i> --></a>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal4528" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Telegram - Channel/Group Members ~ 𝐁𝗢𝗧 ~ Max 6k ~ 𝐍𝐎 𝗥𝗘𝗙𝗜𝗟𝗟 ~ 10k/days ~ INSTANT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Link: https&#58;//t.me/username<br>Start: 1-30 min<br>Speed: 10kdays<br>Refill: No Refill<br>Quality: BOT<br>If you have changed the link or the channel is deleted there will be no cancellation of orders
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+                          </tr>
+                        </tbody>
+                        </table>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+
+
+
+
+
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="acc-status" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content modal-dialog-centered">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item active" role="presentation">
+            <a class="nav-link" id="tab1" data-toggle="tab" href="#new" role="tab" aria-controls="home" aria-selected="true"><i class="far fa-times-circle"></i> New</a>
+          </li>
+          <li class="nav-item " role="presentation">
+            <a class="nav-link" id="tab2" data-toggle="tab" href="#junior" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-times-circle"></i> Junior</a>
+          </li>
+          <li class="nav-item " role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#regular" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Regular</a>
+          </li>
+          <li class="nav-item " role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#frequent" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Frequent</a>
+          </li>
+          <li class="nav-item " role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#elite" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Elite</a>
+          </li>
+          <li class="nav-item " role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#vip" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Vip</a>
+          </li>
+          <li class="nav-item " role="presentation">
+            <a class="nav-link" id="tab3" data-toggle="tab" href="#master" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Master</a>
+          </li>
+    
+        </ul>
+        <p class="status-txt">current status</p>
+        <div class="status-row"></div>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade  in active" id="new" role="tabpanel" aria-labelledby="home-tab">
+            <div class="dual-status">
+              <div class="current-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1star.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">New</h4>
+                    <p>Current Status</p>
+                  </div>
+                </div>
+              </div>
+              <p class="status-link">========== Min. Spend 100₦ To Get ==========></p>
+              <div class="next-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1stary.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Juniour</h4>
+                    <p>Next Status</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+          <div class="row">
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                <li>100₦ Monthly Lottery for 5 random user  </li>
+                <li>Priority Ticket Support by Team </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Free Child panel lifetime</li>
+                <li>5-10% Discount Available</li>
+                <li>whatsapp support By Team</li>
+                <li>Stripe/Paypal manual/Auto accept </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Eary Notification On new services</li>
+                <li>Hidden services</li>
+                <li>special Discount by the admnin </li>
+                <li>Support handle by the admin</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane  fade" id="junior" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="dual-status">
+              <div class="current-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1star.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Junior</h4>
+                    <p>Current Status</p>
+                  </div>
+                </div>
+              </div>
+            <p class="status-link">========== Spend More Than 1000₦ To Get ==========></p>
+              <div class="next-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1stary.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Regular</h4>
+                    <p>Next Status</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+        <div class="row">
+          <div class="col-sm-4">
+            <ul class="acc-status-detail">
+                 <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+                              <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Monthly Lottery for 5 random user</li>
+    
+                <li>Priority Ticket Support by Team </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li> Free Child panel lifetime</li>
+                <li>5-10% Discount Available</li>
+                <li>whatsapp support By Team</li>
+                <li>Stripe/Paypal manual/Auto accept </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Eary Notification On new services</li>
+                <li>Hidden services</li>
+                <li>special Discount by the admnin </li>
+                <li>Support handle by the admin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane  fade" id="regular" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="dual-status">
+              <div class="current-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1star.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Regular</h4>
+                    <p>Current Status</p>
+                  </div>
+                </div>
+              </div>
+          <p class="status-link">========== Spend More Than 2500₦ To Get ==========></p>
+              <div class="next-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1stary.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Frequent</h4>
+                    <p>Next Status</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+      <div class="row">
+        <div class="col-sm-4">
+          <ul class="acc-status-detail">
+             <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Monthly Lottery for 5 random user</li>
+    
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Free Child panel lifetime</li>
+                <li>5-10% Discount Available</li>
+                <li>whatsapp support By Team</li>
+                <li>Stripe/Paypal manual/Auto accept </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Eary Notification On new services</li>
+                <li>Hidden services</li>
+                <li>special Discount by the admnin </li>
+                <li>Support handle by the admin</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade " id="frequent" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="dual-status">
+              <div class="current-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1star.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Frequent</h4>
+                    <p>Current Status</p>
+                  </div>
+                </div>
+              </div>
+        <p class="status-link">========== Spend More Than 5000₦ To Get ==========></p>
+              <div class="next-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1stary.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Elite</h4>
+                    <p>Next Status</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <ul class="acc-status-detail">
+          <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Monthly Lottery for 5 random user</li>
+    
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+                <li>5-10% Discount Available</li>
+                <li>whatsapp support By Team</li>
+                <li>Stripe/Paypal manual/Auto accept </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Eary Notification On new services</li>
+                <li>Hidden services</li>
+                <li>special Discount by the admnin </li>
+                <li>Support handle by the admin</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="tab-pane fad  e" id="elite" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="dual-status">
+              <div class="current-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1star.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Elite</h4>
+                    <p>Current Status</p>
+                  </div>
+                </div>
+              </div>
+      <p class="status-link">========== Spend More Than 15000₦ To Get ==========></p>
+              <div class="next-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1stary.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">VIP</h4>
+                    <p>Next Status</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+    <div class="row">
+    <div class="col-sm-4">
+      <ul class="acc-status-detail">
+       <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Monthly Lottery for 5 random user</li>
+    
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>5-10% Discount Available</li>
+                <li>whatsapp support By Team</li>
+                <li>Stripe/Paypal manual/Auto accept </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Eary Notification On new services</li>
+                <li>Hidden services</li>
+                <li>special Discount by the admnin </li>
+                <li>Support handle by the admin</li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    <div class="tab-pane fade " id="vip" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="dual-status">
+              <div class="current-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1star.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">VIP</h4>
+                    <p>Current Status</p>
+                  </div>
+                </div>
+              </div>
+    <p class="status-link">========== Spend More Than 50000₦ To Get ==========></p>
+              <div class="next-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1stary.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Master</h4>
+                    <p>Next Status</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+    <div class="row">
+    <div class="col-sm-4">
+    <ul class="acc-status-detail">
+     <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Monthly Lottery for 5 random user</li>
+    
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>5-10% Discount Available</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>whatsapp support By Team</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>Stripe/Paypal manual/Auto accept </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li>Eary Notification On new services</li>
+                <li>Hidden services</li>
+                <li>special Discount by the admnin </li>
+                <li>Support handle by the admin</li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="tab-pane fade " id="master" role="tabpanel" aria-labelledby="contact-tab">
+    <div class="dual-status">
+              <div class="current-status">
+                <div class="media">
+                  <div class="media-left media-middle">
+                    <img class="media-object" src="../img/1star.png">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Master</h4>
+                    <p>Current Status</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+    <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+    <div class="row">
+    <div class="col-sm-4">
+    <ul class="acc-status-detail">
+       <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus on Deposit</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Monthly Lottery for 5 random user</li>
+    
+                <li class="acc-status-li"><i class="far fa-check-circle"></i> Priority Ticket Support by Team </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>Free Child panel lifetime</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>5-40% Discount Available</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>whatsapp support By Team</li>
+               <li class="acc-status-li"><i class="far fa-check-circle"></i>Stripe/Paypal manual/Auto accept </li>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <ul class="acc-status-detail">
+                <li class="acc-status-li"><i class="far fa-check-circle"></i>Eary Notification On new services</li>
+                 <li class="acc-status-li"><i class="far fa-check-circle"></i>Hidden services</li>
+                <li class="acc-status-li"><i class="far fa-check-circle"></i>special Discount by the admnin </li>
+                <li class="acc-status-li"><i class="far fa-check-circle"></i>Support handle by the admin</li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+      </div>
+      <div class="modal fade" id="vipstatus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-dialog-centered">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab1" data-toggle="tab" href="#new" role="tab" aria-controls="home" aria-selected="true"><i class="far fa-times-circle"></i> New</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab2" data-toggle="tab" href="#junior" role="tab" aria-controls="profile" aria-selected="false"><i class="far fa-times-circle"></i> Junior</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#regular" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Regular</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#frequent" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Frequent</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#elite" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Elite</a>
+              </li>
+              <li class="nav-item active" role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#vip" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Vip</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#master" role="tab" aria-controls="contact" aria-selected="false"><i class="far fa-times-circle"></i> Master</a>
+              </li>
+    
+            </ul>
+            <p class="status-txt">current status</p>
+            <div class="status-row"></div>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="home-tab">
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                      <li>whatsapp & support</li>
+                      <li>Free Child panel lifetime(website like our ) </li>
+                      <li>5% bonus instead of 2% for regular</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>5-40% Discount Available</li>
+                      <li>Vip Whatsapp / Calling Support</li>
+                      <li>100₦ Montly Lottery for 5 random user</li>
+                      <li>Paypal manual/Auto accept </li>
+                      <li>Best design for Chil</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>personal Assistance</li>
+                      <li>Eary Notification On new services</li>
+                      <li>Hidden services</li>
+                      <li>special Discount by the admnin </li>
+                      <li>Support handle by the admin</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="junior" role="tabpanel" aria-labelledby="profile-tab">
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                      <li>5% bonus instead of 2% for regular</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>5-40% Discount Available</li>
+                      <li>Vip Whatsapp / Calling Support</li>
+                      <li>100₦ Montly Lottery for 5 random user</li>
+                      <li>Paypal manual/Auto accept </li>
+                      <li>Best design for Chil</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>personal Assistance</li>
+                      <li>Eary Notification On new services</li>
+                      <li>Hidden services</li>
+                      <li>special Discount by the admnin </li>
+                      <li>Support handle by the admin</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="regular" role="tabpanel" aria-labelledby="contact-tab">
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                      <li>Vip Whatsapp / Calling Support</li>
+                      <li>100₦ Montly Lottery for 5 random user</li>
+                      <li>Paypal manual/Auto accept </li>
+                      <li>Best design for Chil</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>personal Assistance</li>
+                      <li>Eary Notification On new services</li>
+                      <li>Hidden services</li>
+                      <li>special Discount by the admnin </li>
+                      <li>Support handle by the admin</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="frequent" role="tabpanel" aria-labelledby="contact-tab">
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                      <li>100₦ Montly Lottery for 5 random user</li>
+                      <li>Paypal manual/Auto accept </li>
+                      <li>Best design for Chil</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>personal Assistance</li>
+                      <li>Eary Notification On new services</li>
+                      <li>Hidden services</li>
+                      <li>special Discount by the admnin </li>
+                      <li>Support handle by the admin</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="elite" role="tabpanel" aria-labelledby="contact-tab">
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Montly Lottery for 5 random user</li>
+                      <li>Paypal manual/Auto accept </li>
+                      <li>Best design for Chil</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>personal Assistance</li>
+                      <li>Eary Notification On new services</li>
+                      <li>Hidden services</li>
+                      <li>special Discount by the admnin </li>
+                      <li>Support handle by the admin</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade in active" id="vip" role="tabpanel" aria-labelledby="contact-tab">
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i>5% bonus instead of 2% for regular</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Montly Lottery for 5 random user</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Paypal manual/Auto accept </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Best design for Chil</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li>personal Assistance</li>
+                      <li>Eary Notification On new services</li>
+                      <li>Hidden services</li>
+                      <li>special Discount by the admnin </li>
+                      <li>Support handle by the admin</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="master" role="tabpanel" aria-labelledby="contact-tab">
+                <h3 class="acc-stat-title">HAVEN'T SPENT MORE THAN</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 24/7 ticket support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> whatsapp & support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Free Child panel lifetime(website like our ) </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5% bonus instead of 2% for regular</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 5-40% Discount Available</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Vip Whatsapp / Calling Support</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> 100₦ Montly Lottery for 5 random user</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Paypal manual/Auto accept </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Best design for Chil</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="acc-status-detail">
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> personal Assistance</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Eary Notification On new services</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Hidden services</li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> special Discount by the admnin </li>
+                      <li class="acc-status-li"><i class="far fa-check-circle"></i> Support handle by the admin</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/moment.js"></script>
+    <script src="../js/jquery.sim.min.js.js"></script>
+    <script src="../js/underscore.js"></script>
+    <script src="../js/4etkgu7ilwdsbob4.js"></script>
+    <script src="../js/wnzsoolloslhfumj.js"></script>
+    <script src="../js/navbar-collapse.js"></script>
+    <script src="../js/bootstrap.bundle.min.js.js"></script>
+    
+    <script>
+      $('.sidebar-pinner,#menu-toggle-2,.toggle-menu').click(function(e) {
+      $('#wrapper').toggleClass('toggled')
+      });
+      if ($(window).width() < 551) {
+      $('#wrapper').removeClass('toggled')
+      }
+    </script>
+        <script>
+          $('.userside #navbar .navbar-left-block li .dropdown').hover(function(){  
+          //    $(this).toggleClass('open'); 
+          }); 
+          
+          $('ul.nav li.dropdown, .userside #navbar .navbar-left-block li .dropdown').hover(function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+          }, function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+          });
+        </script>
+        <script>
+          function toggleMode2()
+          {if ($('body').hasClass('dark')) {$('body').removeClass('dark');
+          $('body').addClass('day');} 
+          else {$('body').removeClass('day');$('body').addClass('dark');}}
+        </script>
+</body>
+</html>
